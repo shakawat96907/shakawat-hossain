@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  repo: shakawat96907/shakawat-hossain
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "biography"
+    label: "Biography"
+    files:
+      - label: "About Me"
+        name: "about"
+        file: "content/about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
+
+      - label: "Journey Milestone"
+        name: "milestones"
+        label_singular: "Milestone"
+        file: "content/milestones.md"
+        fields:
+          - { label: "Year or Period", name: "year", widget: "string", required: true }
+          - { label: "Title", name: "title", widget: "string", required: true }
+          - { label: "Description", name: "description", widget: "markdown", required: true }
+
+  - name: "publications"
+    label: "Publications"
+    folder: "content/publications"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Date", name: "date", widget: "datetime", required: true }
+      - { label: "Abstract", name: "abstract", widget: "markdown", required: true }
+      - { label: "DOI Link", name: "doi", widget: "string" }
+      - { label: "GitHub Link", name: "github", widget: "string" }

@@ -1,0 +1,5 @@
+# Decap CMS / Netlify Identity redirects
+/admin/* https://shakawat.netlify.app/admin/:splat 200
+
+# SPA fallback (optional - if deploying as static site)
+/*    /index.html   200
