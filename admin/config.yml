@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: shakawat96907/shakawat-hossain
-  branch: master
+  branch: main
 
 media_folder: "images"
 public_folder: "/images"
@@ -19,7 +19,6 @@ collections:
 
       - label: "Journey Milestone"
         name: "milestones"
-        label_singular: "Milestone"
         file: "content/milestones.md"
         fields:
           - { label: "Year or Period", name: "year", widget: "string", required: true }
