@@ -1,79 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Content Manager</title>
-
-    <!-- Decap CMS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.css" rel="stylesheet"/>
-
-    <!-- Decap CMS Configuration -->
-    <script>
-        CMS_CONFIG = {
-            config: {
-                backend: {
-                    name: "git-gateway",
-                    branch: "main",
-                },
-                media_folder: "images",
-                public_folder: "/images",
-                collections: [
-                    {
-                        name: "biography",
-                        label: "Biography",
-                        files: [
-                            {
-                                label: "About Me",
-                                name: "about",
-                                file: "content/about.md",
-                                fields: [
-                                    { label: "Title", name: "title", widget: "string" },
-                                    {
-                                        label: "Content",
-                                        name: "body",
-                                        widget: "markdown",
-                                    },
-                                ],
-                            },
-                            {
-                                label: "Journey Milestone",
-                                name: "milestones",
-                                label_singular: "Milestone",
-                                file: "content/milestones",
-                                media_folder: "",
-                                public_folder: "",
-                                fields: [
-                                    { label: "Year or Period", name: "year", widget: "string", required: true },
-                                    { label: "Title", name: "title", widget: "string", required: true },
-                                    { label: "Description", name: "description", widget: "markdown", required: true },
-                                ],
-                            },
-                        ],
-                    },
-                    {
-                        name: "publications",
-                        label: "Publications",
-                        folder: "content/publications",
-                        create: true,
-                        slug: "{{year}}-{{slug}}",
-                        fields: [
-                            { label: "Title", name: "title", widget: "string", required: true },
-                            { label: "Date", name: "date", widget: "datetime", required: true },
-                            { label: "Abstract", name: "abstract", widget: "markdown", required: true },
-                            { label: "DOI Link", name: "doi", widget: "string" },
-                            { label: "GitHub Link", name: "github", widget: "string" },
-                        ],
-                    },
-                ],
-            },
-        };
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <!-- Netlify Identity Widget -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-<!-- Decap CMS will render inside this div -->
-<div id="app"></div>
-<script type="module" src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Decap CMS Script (এটি আপনার তৈরি করা config.yml ফাইলটিকে অটোমেটিক লোড করে নেবে) -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 </html>
