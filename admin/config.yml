@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   repo: shakawat96907/shakawat-hossain
-  branch: main
+  branch: master
 
 media_folder: "images"
 public_folder: "/images"
