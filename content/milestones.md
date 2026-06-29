@@ -1,8 +1,11 @@
 ---
-year: "2018 - 2020"
-title: "HSC & Early Scientific Curiosity"
-description: |
-  Completed Higher Secondary education with a focus on biological sciences. Developed a deep fascination with molecular mechanisms of disease, particularly cancer biology, through independent reading and science competitions.
+year: 2019 - 2021
+title: HSC & Early Scientific Curiosity
+description: >
+  Completed Higher Secondary education with a focus on biological sciences.
+  Developed a deep fascination with molecular mechanisms of disease,
+  particularly cancer biology, through independent reading and science
+  competitions.
 ---
 
 ---
