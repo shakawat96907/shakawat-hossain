@@ -264,6 +264,16 @@ section {
     margin: 0 auto;
 }
 
+.about__profile-img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin: 0 auto 2rem;
+    display: block;
+    box-shadow: var(--shadow-lg);
+}
+
 .about__intro {
     font-size: 1.2rem;
     color: var(--color-slate);
