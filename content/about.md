@@ -1,5 +1,5 @@
 ---
-title: "About Me"
+title: Me as A Researcher
 ---
 
 I am a final-year **Biochemistry and Molecular Biology** student and an active **Cancer Researcher** passionate about unraveling the molecular complexities of cancer and translating genomic insights into precision medicine solutions.
