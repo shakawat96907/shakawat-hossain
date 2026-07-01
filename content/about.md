@@ -8,21 +8,22 @@ My research sits at the intersection of *bioinformatics*, *transcriptomics*, and
 
 ## Current University
 
-**University of Dhaka**
+**Shahjalal University of Science and Technology (SUST)**
 
-- **Degree:** B.Sc. in Biochemistry and Molecular Biology (Final Year)
-- **Expected Graduation:** 2024
+- **Degree:** B.Sc. in Biochemistry and Molecular Biology
+- **Duration:** 2023 - Present
+- **Expected Graduation:** July 2027
 
 ## Research Summary
 
-My research focuses on cancer transcriptomics and bioinformatics, leveraging computational approaches to analyze high-throughput sequencing data for identifying therapeutic targets and biomarkers in cancer.
+My research is dedicated to **breast cancer** transcriptomics and **pan-cancer** analysis, with a special focus on **single-cell transcriptomics of breast cancer**. I leverage computational approaches to analyze high-throughput sequencing data for identifying therapeutic targets and developing precision medicine strategies specifically for breast cancer patients.
 
 ## Research Interests
 
-- **Breast Cancer:** Molecular characterization and therapeutic target identification
-- **Pan-Cancer Analysis:** Integrative multi-omics approaches across cancer types
-- **Single-cell Transcriptomics:** Unraveling tumor heterogeneity in breast cancer
+- **Breast Cancer:** Molecular mechanisms, therapeutic target identification, and precision oncology
+- **Pan-Cancer Analysis:** Comparative transcriptomics and conserved oncogenic pathways
+- **Single-cell Transcriptomics in Breast Cancer:** Tumor heterogeneity, microenvironment, and drug resistance
 
 ## Long-term Aim
 
-To establish a research program dedicated to discovering novel therapeutic targets by bridging bioinformatics, molecular biology, and clinical oncology, ultimately contributing to precision medicine strategies for cancer patients.
+**Breast Cancer Focus:** To establish a dedicated research program focused entirely on breast cancer, developing novel therapeutic targets through integrative bioinformatics, single-cell analysis, and clinical translation. My ultimate goal is to contribute to improved diagnosis, treatment strategies, and patient outcomes for breast cancer through cutting-edge computational and molecular research.
