@@ -111,35 +111,6 @@ function initScrollHeader() {
 }
 
 // --------------------------------------------
-// Animations on Scroll (Intersection Observer)
-// --------------------------------------------
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll(
-        ".about__content, .education-card, .timeline__item, .publication-card, .skills-category, .contact-card"
-    );
-
-    if (!animatedElements.length) return;
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animationPlayState = "running";
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
-
-    animatedElements.forEach((el) => {
-        el.style.animationPlayState = "paused";
-        el.style.opacity = "0";
-        observer.observe(el);
-    });
-}
-
-// --------------------------------------------
 // Initialize Everything
 // --------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -147,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initCMS();
     initSmoothScroll();
     initScrollHeader();
-    initScrollAnimations();
 
     console.log("Portfolio initialized successfully.");
 });
