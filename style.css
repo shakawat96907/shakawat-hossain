@@ -1380,6 +1380,7 @@ section {
 
 .research-card:nth-child(1) { animation-delay: 0.1s; }
 .research-card:nth-child(2) { animation-delay: 0.15s; }
+.research-card:nth-child(3) { animation-delay: 0.2s; }
 
 .conference-card:nth-child(1) { animation-delay: 0.1s; }
 .conference-card:nth-child(2) { animation-delay: 0.15s; }
