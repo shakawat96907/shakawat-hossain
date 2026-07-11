@@ -553,6 +553,30 @@ section {
     border-radius: 2rem;
 }
 
+/* Pulsing red active indicator */
+.research-card__status.active {
+    color: #dc2626;
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    animation: pulseRed 1.5s ease-in-out infinite;
+}
+
+.research-card__status.active i {
+    color: #dc2626;
+    font-size: 0.65rem;
+}
+
+@keyframes pulseRed {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+    }
+    50% {
+        opacity: 0.6;
+        box-shadow: 0 0 0 8px rgba(220, 38, 38, 0);
+    }
+}
+
 .research-card__status i {
     font-size: 0.75rem;
 }
@@ -600,6 +624,92 @@ section {
     padding: 0.3rem 0.75rem;
     border-radius: 2rem;
     border: 1px solid var(--color-teal-light);
+}
+
+/* --------------------------------------------
+   Publications Section
+   -------------------------------------------- */
+.publications__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.publication-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--card-padding);
+    border: 1px solid var(--color-border);
+    transition: all var(--transition-speed) ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-teal-light);
+}
+
+.publication-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.publication-card__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 2rem;
+}
+
+.publication-card__status.in-review {
+    color: #b45309;
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+}
+
+.publication-card__status.revision {
+    color: #7c3aed;
+    background: #f5f3ff;
+    border: 1px solid #c4b5fd;
+}
+
+.publication-card__title {
+    font-family: var(--font-secondary);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-slate-dark);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.publication-card__abstract {
+    font-size: 0.9rem;
+    color: var(--color-slate);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.publication-card__links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.highlight-authorship {
+    color: var(--color-teal-dark);
+    font-weight: 600;
+    background: var(--color-teal-bg);
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.35rem;
+    display: inline-block;
 }
 
 /* --------------------------------------------
@@ -1143,31 +1253,6 @@ section {
     /* About Mobile */
     .about__details {
         grid-template-columns: 1fr;
-    }
-
-    /* Timeline Mobile */
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline__item {
-        width: 100%;
-        left: 0 !important;
-        text-align: left !important;
-        padding-left: 3.5rem !important;
-        padding-right: 0 !important;
-    }
-
-    .timeline__marker {
-        left: 12px !important;
-        right: auto !important;
-    }
-
-    .timeline__content::before {
-        left: -16px !important;
-        right: auto !important;
-        border-right-color: var(--color-border) !important;
-        border-left-color: transparent !important;
     }
 
     /* Skills Mobile */
