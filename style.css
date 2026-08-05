@@ -505,6 +505,33 @@ section {
     transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Horizontal tag-style skills */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--color-teal-dark);
+    background: var(--color-teal-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 2rem;
+    border: 1px solid var(--color-teal-light);
+    transition: all var(--transition-speed) ease;
+}
+
+.skill-tag:hover {
+    background: var(--color-teal);
+    color: var(--color-white);
+    border-color: var(--color-teal);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
 /* --------------------------------------------
    Research Experience Section
    -------------------------------------------- */
