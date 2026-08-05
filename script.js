@@ -141,23 +141,13 @@ function initCertificateLightbox() {
             modalViewer.innerHTML = "";
             currentScale = 1;
 
-            if (fileExt === "pdf") {
-                const embed = document.createElement("embed");
-                embed.src = certPath;
-                embed.type = "application/pdf";
-                embed.style.width = "100%";
-                embed.style.height = "65vh";
-                embed.style.borderRadius = "0.35rem";
-                modalViewer.appendChild(embed);
-            } else {
-                const img = document.createElement("img");
-                img.src = certPath;
-                img.alt = title;
-                img.style.maxWidth = "100%";
-                img.style.maxHeight = "65vh";
-                img.style.borderRadius = "0.35rem";
-                modalViewer.appendChild(img);
-            }
+            const img = document.createElement("img");
+            img.src = certPath;
+            img.alt = title;
+            img.style.maxWidth = "100%";
+            img.style.maxHeight = "65vh";
+            img.style.borderRadius = "0.35rem";
+            modalViewer.appendChild(img);
 
             modal.classList.add("active");
             document.body.style.overflow = "hidden";
