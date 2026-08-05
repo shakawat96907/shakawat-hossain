@@ -111,6 +111,120 @@ function initScrollHeader() {
 }
 
 // --------------------------------------------
+// Certificate Lightbox
+// --------------------------------------------
+function initCertificateLightbox() {
+    const modal = document.getElementById("certificate-modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalViewer = document.getElementById("modal-viewer");
+    const modalClose = document.getElementById("modal-close");
+    const zoomInBtn = document.getElementById("modal-zoom-in");
+    const zoomOutBtn = document.getElementById("modal-zoom-out");
+    const resetBtn = document.getElementById("modal-reset");
+
+    if (!modal || !modalViewer) return;
+
+    let currentScale = 1;
+    const scaleStep = 0.25;
+    const minScale = 0.5;
+    const maxScale = 3;
+
+    const certificateCards = document.querySelectorAll(".certificate-card");
+
+    certificateCards.forEach((card) => {
+        card.addEventListener("click", () => {
+            const certPath = card.getAttribute("data-cert");
+            const title = card.querySelector(".certificate-card__content h4")?.textContent || "Certificate";
+            const fileExt = certPath.split(".").pop().toLowerCase();
+
+            modalTitle.textContent = title;
+            modalViewer.innerHTML = "";
+            currentScale = 1;
+
+            if (fileExt === "pdf") {
+                const embed = document.createElement("embed");
+                embed.src = certPath;
+                embed.type = "application/pdf";
+                embed.style.width = "100%";
+                embed.style.height = "65vh";
+                embed.style.borderRadius = "0.35rem";
+                modalViewer.appendChild(embed);
+            } else {
+                const img = document.createElement("img");
+                img.src = certPath;
+                img.alt = title;
+                img.style.maxWidth = "100%";
+                img.style.maxHeight = "65vh";
+                img.style.borderRadius = "0.35rem";
+                modalViewer.appendChild(img);
+            }
+
+            modal.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    const closeModal = () => {
+        modal.classList.remove("active");
+        modalViewer.innerHTML = '<p class="placeholder">Loading certificate...</p>';
+        document.body.style.overflow = "";
+        currentScale = 1;
+        applyZoom();
+    };
+
+    const applyZoom = () => {
+        const viewerContent = modalViewer.firstElementChild;
+        if (!viewerContent) return;
+        viewerContent.style.transform = `scale(${currentScale})`;
+        viewerContent.style.transition = "transform 0.2s ease";
+    };
+
+    if (modalClose) modalClose.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (!modal.classList.contains("active")) return;
+        if (e.key === "Escape") closeModal();
+        if (e.key === "+" || e.key === "=") {
+            currentScale = Math.min(maxScale, currentScale + scaleStep);
+            applyZoom();
+        }
+        if (e.key === "-") {
+            currentScale = Math.max(minScale, currentScale - scaleStep);
+            applyZoom();
+        }
+        if (e.key === "0") {
+            currentScale = 1;
+            applyZoom();
+        }
+    });
+
+    if (zoomInBtn) {
+        zoomInBtn.addEventListener("click", () => {
+            currentScale = Math.min(maxScale, currentScale + scaleStep);
+            applyZoom();
+        });
+    }
+
+    if (zoomOutBtn) {
+        zoomOutBtn.addEventListener("click", () => {
+            currentScale = Math.max(minScale, currentScale - scaleStep);
+            applyZoom();
+        });
+    }
+
+    if (resetBtn) {
+        resetBtn.addEventListener("click", () => {
+            currentScale = 1;
+            applyZoom();
+        });
+    }
+}
+
+// --------------------------------------------
 // Initialize Everything
 // --------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
@@ -118,6 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCMS();
     initSmoothScroll();
     initScrollHeader();
+    initCertificateLightbox();
 
     console.log("Portfolio initialized successfully.");
 });
