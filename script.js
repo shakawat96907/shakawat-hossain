@@ -133,9 +133,9 @@ function initCertificateLightbox() {
 
     certificateCards.forEach((card) => {
         card.addEventListener("click", () => {
-            const certPath = card.getAttribute("data-cert");
+            const rawPath = card.getAttribute("data-cert");
+            const certPath = encodeURI(rawPath);
             const title = card.querySelector(".certificate-card__content h4")?.textContent || "Certificate";
-            const fileExt = certPath.split(".").pop().toLowerCase();
 
             modalTitle.textContent = title;
             modalViewer.innerHTML = "";

@@ -1519,9 +1519,16 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    color: var(--color-slate-lighter);
     margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.certificate-card__thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.35rem;
+    display: block;
 }
 
 /* Certificate Lightbox Modal */
