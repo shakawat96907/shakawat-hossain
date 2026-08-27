@@ -710,6 +710,12 @@ section {
     animation: pulseDeepRed 1.5s ease-in-out infinite;
 }
 
+.publication-card__status.published {
+    color: #15803d;
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+}
+
 @keyframes pulseDeepRed {
     0%, 100% {
         opacity: 1;
@@ -741,6 +747,21 @@ section {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
+}
+
+.publication-card__links a.pub-link {
+    color: var(--color-teal);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.publication-card__links a.pub-link:hover {
+    color: var(--color-teal-dark);
+    text-decoration: underline;
 }
 
 .highlight-authorship {
