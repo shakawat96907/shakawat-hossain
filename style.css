@@ -716,6 +716,12 @@ section {
     border: 1px solid #86efac;
 }
 
+.publication-card__status.preprint {
+    color: #1e40af;
+    background: #eff6ff;
+    border: 1px solid #93c5fd;
+}
+
 @keyframes pulseDeepRed {
     0%, 100% {
         opacity: 1;
