@@ -1092,6 +1092,17 @@ section {
     margin-right: 0.3rem;
 }
 
+.teaching-card__description {
+    font-size: 0.9rem;
+    color: var(--color-slate);
+    margin-bottom: 0.75rem;
+}
+
+.teaching-card__description i {
+    color: var(--color-teal);
+    margin-right: 0.3rem;
+}
+
 .teaching-card__duties {
     list-style: disc;
     padding-left: 1.5rem;
