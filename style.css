@@ -864,6 +864,65 @@ section {
     font-style: italic;
 }
 
+.conference-card__type i {
+    margin-right: 0.35rem;
+}
+
+.conference-card__type--poster {
+    background: #f3e8ff;
+    color: #7e22ce;
+}
+
+.conference-card__type--participation {
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.conference-card__type--workshop {
+    background: #fffbeb;
+    color: #b45309;
+}
+
+.conference-card__type--symposium {
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+.conference-card__conference {
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    margin-bottom: 0.5rem;
+}
+
+.conference-card__organizer {
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    margin-bottom: 0.5rem;
+}
+
+.conference-card__date {
+    font-size: 0.85rem;
+    color: var(--color-slate);
+    margin-bottom: 0;
+}
+
+.conference-card__role i,
+.conference-card__conference i,
+.conference-card__organizer i,
+.conference-card__date i {
+    color: var(--color-teal);
+    margin-right: 0.3rem;
+}
+
+.conference-card__location strong,
+.conference-card__role strong,
+.conference-card__conference strong,
+.conference-card__organizer strong,
+.conference-card__date strong {
+    color: var(--color-slate);
+    font-weight: 600;
+}
+
 /* --------------------------------------------
    Trainings Section
    -------------------------------------------- */
