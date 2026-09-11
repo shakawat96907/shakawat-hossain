@@ -1758,3 +1758,20 @@ section {
     color: var(--color-slate-light);
     font-size: 0.95rem;
 }
+
+/* Status badge: Completed (Research) */
+.research-card__status.completed {
+    color: #15803d;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+}
+.research-card__status.completed i {
+    color: #15803d;
+    font-size: 0.75rem;
+}
+
+/* Training card description icon tint */
+.training-card__description i {
+    color: var(--color-teal);
+    margin-right: 0.3rem;
+}
